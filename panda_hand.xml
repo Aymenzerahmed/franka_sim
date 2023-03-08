@@ -92,7 +92,8 @@
                                     <joint name="panda_joint7" range="-2.9671 2.9671" class="panda_forearm"/>
                                     <geom class="panda_viz" mesh="link7_viz"/>
                                     <geom class="panda_col" mesh="link7_col" mass="0.2"/>
-
+                                <!--site for left hand sensor-->
+                                    <site name="panda_link7" size="0.01" pos="0.0 0.0 -0.04435" euler="3.14 0 0"/>
                                     <!-- End Effector -->
                                     <body name="franka_gripper">
                                         <geom pos="0 0 0.107" quat="0.92388 0 0 -0.382683" class="panda_viz" mesh="hand_viz"/>
@@ -174,4 +175,8 @@
         <position name="panda_finger_joint2" joint="panda_finger_joint2" class="panda" kp="20" forcerange="-20 20" ctrlrange="0 0.04"/> <!-- velocity=".2" -->
     </actuator>
 
+    <sensor>
+        <force name="LeftHandForceSensor_fsensor" site="panda_link7" />
+        <torque name="LeftHandForceSensor_tsensor" site="panda_link7" />
+    </sensor>
 </mujoco>

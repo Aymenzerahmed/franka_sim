@@ -93,9 +93,12 @@
                                     <joint name="panda_joint7" range="-2.9671 2.9671" class="panda_forearm"/>
                                     <geom class="panda_viz" mesh="link7_viz"/>
                                     <geom class="panda_col" mesh="link7_col" mass="0.2"/>
+                                    <!--site for left hand sensor-->
+                                    <site name="panda_link7" size="0.01" pos="0.0 0.0 -0.04435" euler="3.14 0 0"/>
                                     <body name="panda_pump" pos="0 0 +.105" euler="3.14 0 0">
                                       <geom class="panda_viz" mesh="pump_viz" />
                                       <geom class="panda_col" mesh="pump_col" mass="1.01" />
+                                      <site type="box" rgba="0 0 0 0" size="0.0005 0.0005 0.001" pos="0 0 1" name="PumpGripper"/>
                                     </body> 
                                   </body>
                             </body>
@@ -117,4 +120,8 @@
         <position name="panda_joint7" joint="panda_joint7" class="panda" kp="120" forcerange="-12 12" ctrlrange="-2.9671 2.9671"/> <!-- velocity="2.9671" -->
     </actuator>
 
+    <sensor>
+        <force name="LeftHandForceSensor_fsensor" site="panda_link7" />
+        <torque name="LeftHandForceSensor_tsensor" site="panda_link7" />
+    </sensor>
 </mujoco>
