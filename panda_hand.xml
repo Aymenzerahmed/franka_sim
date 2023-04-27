@@ -32,7 +32,7 @@
         <mesh name="link7_viz" file="meshes/visual/link7.stl"/>
         <mesh name="hand_viz" file="meshes/visual/hand.stl"/>
         <mesh name="finger_col" file="meshes/collision/finger.stl" scale='1.75 1.0 1.75'/>
-        <mesh name="finger_viz" file="meshes/collision/finger.stl" scale='1.75 1.0 1.75'/>
+        <mesh name="finger_viz" file="meshes/visual/finger.stl" scale='1.75 1.0 1.75'/>
     </asset>
 
     <default>
