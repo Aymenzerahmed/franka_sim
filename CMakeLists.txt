@@ -12,6 +12,7 @@ install(DIRECTORY meshes DESTINATION "${SHARE_DESTINATION}")
 install(FILES panda_default.xml DESTINATION "${SHARE_DESTINATION}")
 install(FILES panda_foot.xml DESTINATION "${SHARE_DESTINATION}")
 install(FILES panda_fist.xml DESTINATION "${SHARE_DESTINATION}")
+install(FILES panda_push.xml DESTINATION "${SHARE_DESTINATION}")
 install(FILES panda_hand.xml DESTINATION "${SHARE_DESTINATION}")
 install(FILES panda_pump.xml DESTINATION "${SHARE_DESTINATION}")
 
@@ -26,6 +27,9 @@ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/panda_foot.yaml" DESTINATION "${MC_MU
 
 configure_file(mc_mujoco/panda_fist.in.yaml "${CMAKE_CURRENT_BINARY_DIR}/panda_fist.yaml")
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/panda_fist.yaml" DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}")
+
+configure_file(mc_mujoco/panda_push.in.yaml "${CMAKE_CURRENT_BINARY_DIR}/panda_push.yaml")
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/panda_push.yaml" DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}")
 
 configure_file(mc_mujoco/panda_pump.in.yaml "${CMAKE_CURRENT_BINARY_DIR}/panda_pump.yaml")
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/panda_pump.yaml" DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}")
