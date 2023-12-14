@@ -1,1 +1,2 @@
 xmlModelPath: "@SHARE_DESTINATION@/panda_foot.xml"
+pdGainsPath: "@Panda_PDGAINS_PATH@"
